@@ -1,9 +1,7 @@
-# Practise Question 4: Write a function called plant_status that takes two parameters — temperature and humidity. If temperature is above 39 AND humidity is below 50 print "Critical". Otherwise print "Stable".
-
-def plant_status (temperature, humidity):
-    if temperature > 39 and humidity < 50:
-        return("Critical")
-    else:
-        return("Stable")
-
-print(plant_status(40, 70))
+# Practise Question 5: Create a numpy array of the humidity readings from Question 3. Print the mean, max, and min. Then print only the readings above 70.
+import numpy as np
+humidity_reading = np.array([55, 70, 80, 45, 90, 60, 75])
+print(humidity_reading.mean())
+print(humidity_reading.max())
+print(humidity_reading.min())
+print(humidity_reading[humidity_reading > 70])
