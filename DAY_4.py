@@ -1,4 +1,4 @@
-# Practise Question 3: Create a DataFrame with 4 plants — name, soil moisture, and days since last watered. Print the full table. Print only plants where days since last watered is above 3.
+# Practise Question 4: Using the same DataFrame from Question 3, print the average days since last watered. Then print the shape of the table.
 import pandas as pd
 
 Data_frame = {
@@ -7,5 +7,5 @@ Data_frame = {
                 "last_watered" : [10, 2, 7, 1],
 }
 df = pd.DataFrame(Data_frame)
-print(df)
-print(df[df["last_watered"] > 3])
+print(df["last_watered"].mean())
+print(df.shape)
