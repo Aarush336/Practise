@@ -1,8 +1,11 @@
-# Practise Question 1: Create a numpy array of soil moisture readings: [23, 45, 12, 67, 34, 89, 56]. Print the mean, max, and min. Then print only readings above 50.
-import numpy as np
+# Practise Question 3: Create a DataFrame with 4 plants — name, soil moisture, and days since last watered. Print the full table. Print only plants where days since last watered is above 3.
+import pandas as pd
 
-moisture = np.array([23, 45, 12, 67, 34, 89, 56])
-print(moisture.mean())
-print(max(moisture))
-print(min(moisture))
-print(moisture[moisture > 50])
+Data_frame = {
+                "name" : ["Cactus", "Dandelion", "Daisy", "Sunflower"],
+                "soil_moisture" : [False, True, True, False],
+                "last_watered" : [10, 2, 7, 1],
+}
+df = pd.DataFrame(Data_frame)
+print(df)
+print(df[df["last_watered"] > 3])
